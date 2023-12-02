@@ -17,8 +17,8 @@ function Data() {
   const user1Percentage = (user1Posts / totalPosts) * 100;
 
   const pieChartData = [
-    { name: "User ID 1", value: user1Percentage },
-    { name: "Other Users", value: 100 - user1Percentage },
+    { name: "User ID 1 %", value: user1Percentage },
+    { name: "Other Users %", value: 100 - user1Percentage },
   ];
 
   const COLORS = ["#0088FE", "#00C49F"];
