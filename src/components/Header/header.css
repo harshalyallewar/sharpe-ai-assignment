@@ -33,3 +33,14 @@ nav a {
 nav a:hover {
   color: #ccc;
 }
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0px;
+  }
+
+  nav ul {
+    justify-content: center;
+    width: 100%;
+  }
+}
