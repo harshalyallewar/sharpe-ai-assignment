@@ -9,13 +9,19 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 const Transaction = () => {
   // State for wallet address and amount
   const [walletAddress, setWalletAddress] = useState("");
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(0);
 
   // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     // Validation checks
+
+    if (walletAddress.length === 0 && amount.length==0) {
+      toast.error("fields cannot be empty");
+      return;
+    }
+
+
     if (walletAddress.length === 0) {
       toast.error("Wallet address field cannot be empty");
       return;
@@ -29,7 +35,7 @@ const Transaction = () => {
 
     // Check if the amount is within a valid range
     const parsedAmount = await Number(amount);
-    if (isNaN(parsedAmount) || parsedAmount < 0 || parsedAmount > 10000) {
+    if (amount.length==0 || parsedAmount < 0 || parsedAmount > 10000) {
       toast.error("Enter amount between 0 and 10000");
       return;
     }

@@ -1,45 +1,36 @@
-// Import React and ReactDOM for rendering
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-// Import styling for the entire application
-import "./index.css";
+// Import the functions that need from the SDKs you need
 
-// Import the main App component
-import App from "./App";
-
-// Import Firebase SDK components
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
-// Firebase configuration object containing credentials
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+//  web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YourApiKey",
-  authDomain: "YourAuthDomain",
-  projectId: "YourProjectId",
-  storageBucket: "YourStorageBucket",
-  messagingSenderId: "YourMessagingSenderId",
-  appId: "YourAppId",
-  measurementId: "YourMeasurementId",
+  apiKey: "AIzaSyBuu7lWXdOoLgogm4uFny4nFz_jkxQOojs",
+  authDomain: "sharpeaiassignment-7f4ef.firebaseapp.com",
+  projectId: "sharpeaiassignment-7f4ef",
+  storageBucket: "sharpeaiassignment-7f4ef.appspot.com",
+  messagingSenderId: "457931629648",
+  appId: "1:457931629648:web:7525645687f425b9955d55",
+  measurementId: "G-62BPXQPQRJ"
 };
 
-// Initialize Firebase with the provided configuration
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// Create a root element for ReactDOM rendering
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// Render the main App component within React.StrictMode
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
 
-// Optional: If you want to measure performance, uncomment the following lines
-// Import reportWebVitals function (assuming it's part of your project)
-// import reportWebVitals from './reportWebVitals';
 
-// Call the reportWebVitals function to log performance data
-// reportWebVitals();
