@@ -61,7 +61,7 @@ const Transaction = () => {
       {/* Form for wallet address and amount input */}
       <form onSubmit={handleSubmit}>
         <label>
-          Wallet Address:
+          Ethereum Wallet Address:
           <input
             type="text"
             value={walletAddress}

@@ -23,20 +23,28 @@ min-height: calc(100vh - 60px);
 
 .table {
   width: 100%;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   color: white;
   background-color: rgb(29, 39, 48);
   margin-bottom: 20px;
   padding: 0px 22px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  border-spacing: 0px 10px;
 }
 
 .table th, .table td {
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
   padding: 10px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-size: 16px;
   color: white;
-  background-color: rgb(29, 39, 48);
+  /* background-color: rgb(29, 39, 48); */
+  background-color: #343A3F;
+}
+
+.table td {
+  padding: 15px 25px !important;
 }
 
 .table th {
@@ -44,8 +52,11 @@ min-height: calc(100vh - 60px);
   background-color: rgb(20, 26, 31);
   font-weight: bold;
   padding: 10px;
-  border-radius: 5px;
+  /* border-top-left-radius: 5px;
+  border-top-right-radius: 5px; */
 }
+
+
 
 .table tr:hover {
   background-color: #f0f0f0;
@@ -60,6 +71,9 @@ min-height: calc(100vh - 60px);
     width: 100%;
     margin-bottom: 10px;
     padding: 0 1px;
+  }
+  .table td {
+    padding: 8px 15px !important;
   }
 }
 
