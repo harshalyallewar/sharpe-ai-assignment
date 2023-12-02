@@ -1,0 +1,35 @@
+/* Navbar styles */
+
+nav {
+  background-color: #11161a;
+  padding: 0 100px;
+  text-align: center;
+  min-height: 60px;
+  display: flex;
+  align-items: center; /* Vertically center items */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+  height: 100%;
+  align-items: center; /* Vertically center items */
+}
+
+/* nav li {
+  margin-right: 25px;
+} */
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: #ccc;
+}
